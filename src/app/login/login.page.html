@@ -1,0 +1,35 @@
+
+<ion-content class="ion-padding">
+  <!-- Logo con ancho expandido -->
+  <div class="logo-container">
+    <ion-img src="assets/img/logo.png" alt="App Logo"></ion-img> <!-- Imagen del logo de la app -->
+  </div>
+
+  <!-- Formulario de Login -->
+  <form (ngSubmit)="onLogin()" #loginForm="ngForm"> <!-- Al enviar el formulario, ejecuta el método onLogin() -->
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label> <!-- Etiqueta para el campo de nombre de usuario -->
+      <ion-input type="text" [(ngModel)]="username" name="username" required></ion-input> <!-- Campo de entrada para el nombre de usuario -->
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label> <!-- Etiqueta para el campo de contraseña -->
+      <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input> <!-- Campo de entrada para la contraseña -->
+    </ion-item>
+
+    <ion-button expand="full" type="submit" [disabled]="!loginForm.valid">Iniciar sesión</ion-button> <!-- Botón para enviar el formulario (deshabilitado si el formulario no es válido) -->
+  </form>
+
+  <!-- Enlace para recuperar la contraseña -->
+  <ion-row>
+    <ion-col class="ion-text-center">
+      <ion-button fill="clear" (click)="goToForgotPassword()">¿Olvidó la contraseña?</ion-button> <!-- Botón para ir a la página de recuperación de contraseña -->
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button expand="full" fill="clear" (click)="goToSignup()">¿No tiene cuenta? Registrarse</ion-button> <!-- Botón para ir a la página de registro (Sign Up) -->
+    </ion-col>
+  </ion-row>
+</ion-content>
