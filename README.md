@@ -1,6 +1,9 @@
 Estudiante: Javier Paez Ilabaca
+
 Profesor: Miguel Puebla Cuero
+
 Curso: Programacion de aplicaciones moviles
+
 Instituto Duoc UC
 
 Repositorio para el proyecto bimestral: diseñando una app hibrida usando Ionic Framework + Angular
