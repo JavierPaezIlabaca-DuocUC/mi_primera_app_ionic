@@ -8,7 +8,7 @@ Instituto Duoc UC
 
 Repositorio para el proyecto bimestral: diseñando una app hibrida usando Ionic Framework + Angular
 
-Mi app consiste en el diseño de un "hub" para guardias de seguridad chilenos y empresas de seguridad privada, la idea final es que el portal contenga las siguientes secciones:
+Mi app, llamada "GGSS.cl", consiste en el diseño de un "hub" para guardias de seguridad chilenos y empresas de seguridad privada, la idea final es que el portal contenga las siguientes secciones:
 
 1. Ofertas laborales: publicacion de ofertas de trabajo y de turnos esporadicos
 2. OS10: seccion tipo quiz donde el usuario puede realizar el cuestionario OS10 el cual es requisito aprobar para estar autorizado a ser guardia de seguridad
