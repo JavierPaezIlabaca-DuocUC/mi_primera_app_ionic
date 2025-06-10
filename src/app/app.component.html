@@ -1,0 +1,21 @@
+<ion-app>
+  <!-- Menú lateral -->
+  <ion-menu side="start" menuId="main-menu" contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title> <!-- Título del menú -->
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!-- Elementos del menú, cada uno navega a una ruta específica -->
+        <ion-item routerLink="/tabs/tab1">Home</ion-item>
+        <ion-item routerLink="/tabs/tab2">List</ion-item>
+        <ion-item routerLink="/tabs/tab3">Settings</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- Contenedor donde se carga el contenido de las rutas -->
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-app>

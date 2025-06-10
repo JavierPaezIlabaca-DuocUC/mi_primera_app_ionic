@@ -1,0 +1,55 @@
+ion-header {
+  --background: #3880ff; /* Establece el color de fondo del encabezado */
+  --color: white; /* Establece el color del texto en el encabezado */
+}
+
+ion-content {
+  display: flex; /* Utiliza flexbox para organizar los elementos */
+  flex-direction: column; /* Coloca los elementos de forma vertical (de arriba a abajo) */
+  justify-content: center; /* Centra los elementos de forma vertical */
+  align-items: center; /* Centra los elementos de forma horizontal */
+  padding: 20px; /* Agrega un espaciado de 20px alrededor del contenido */
+}
+
+.logo-container {
+  width: 100%; /* Hace que el contenedor del logo ocupe todo el ancho disponible */
+  display: flex; /* Usa flexbox para organizar los elementos dentro del contenedor */
+  justify-content: center; /* Centra el logo horizontalmente */
+  padding-bottom: 20px; /* Agrega un espaciado en la parte inferior del contenedor */
+  animation: fadeInScale 1.5s ease-out; /* Aplica una animación de aparición y escala */
+}
+
+ion-img {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
+  max-width: 910px; /* Limita el ancho máximo de la imagen a 910px */
+  height: auto; /* Ajusta la altura automáticamente para mantener la relación de aspecto */
+  max-height: 450px; /* Limita la altura máxima de la imagen a 450px */
+}
+
+ion-item {
+  width: 100%; /* Hace que los elementos de la lista ocupen todo el ancho disponible */
+}
+
+ion-button {
+  margin-top: 20px; /* Agrega un margen de 20px en la parte superior del botón */
+}
+
+ion-row {
+  margin-top: 10px; /* Agrega un margen de 10px en la parte superior de las filas */
+}
+
+/* Define la animación fadeInScale */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0; /* Comienza completamente transparente */
+    transform: scale(0.5); /* Comienza más pequeño */
+  }
+  50% {
+    opacity: 0.7; /* Aumenta la opacidad a 0.7 */
+    transform: scale(1.05); /* Aumenta un poco el tamaño */
+  }
+  100% {
+    opacity: 1; /* Termina completamente visible */
+    transform: scale(1); /* Termina en el tamaño normal */
+  }
+}

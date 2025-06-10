@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">USUARIO NUEVO</ion-title>  <!-- Título de la página -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="onSignup()" #signupForm="ngForm">
+    
+    <!-- Campo para el nombre de usuario -->
+    <ion-item>
+      <ion-label position="floating">Nombre de usuario</ion-label>
+      <ion-input type="text" [(ngModel)]="username" name="username" required></ion-input>
+    </ion-item>
+    
+    <!-- Campo para el correo electrónico -->
+    <ion-item>
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+    </ion-item>
+    
+    <!-- Campo para la contraseña -->
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+    </ion-item>
+
+    <!-- Campo para confirmar la contraseña -->
+    <ion-item>
+      <ion-label position="floating">Confirmar contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required></ion-input>
+    </ion-item>
+
+    <!-- Botón para registrarse -->
+    <ion-button expand="full" type="submit" [disabled]="!signupForm.valid || !passwordsMatch()">Registrarse</ion-button>
+  </form>
+
+  <!-- Enlace para redirigir a la página de inicio de sesión si ya tienen cuenta -->
+  <ion-row>
+    <ion-col>
+      <ion-button expand="full" fill="clear" (click)="goToLogin()">¿Ya tienes una cuenta? Iniciar sesión</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>CUESTIONARIO OS10</ion-title> <!-- Título del cuestionario -->
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu"></ion-menu-button> <!-- Botón para abrir el menú lateral -->
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Si el cuestionario no ha sido completado, mostrar las preguntas -->
+  <div *ngIf="!quizCompleted">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ questions[currentQuestionIndex].text }}</ion-card-title> <!-- Título de la pregunta actual -->
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-radio-group [(ngModel)]="selectedAnswer">
+            <!-- Listado de opciones para la respuesta -->
+            <ion-item *ngFor="let option of questions[currentQuestionIndex].options">
+              <ion-label>{{ option }}</ion-label> <!-- Opción de respuesta -->
+              <ion-radio slot="start" [value]="option"></ion-radio> <!-- Radio button para seleccionar la respuesta -->
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+        <ion-button expand="full" (click)="submitAnswer()">Enviar Respuesta</ion-button> <!-- Botón para enviar la respuesta -->
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!-- Si el cuestionario ha sido completado, mostrar la puntuación -->
+  <div *ngIf="quizCompleted">
+    <ion-item>
+      <ion-label>
+        <h2>Tu puntuación es: {{ score }}/{{ questions.length }}</h2> <!-- Mostrar la puntuación -->
+        <h3 *ngIf="score >= 3">APROBADO</h3> <!-- Mensaje de aprobación si la puntuación es suficiente -->
+        <h3 *ngIf="score < 3">INTENTA DE NUEVO</h3> <!-- Mensaje si no se aprobó -->
+      </ion-label>
+    </ion-item>
+    <ion-button expand="full" (click)="restartQuiz()">Reiniciar Cuestionario</ion-button> <!-- Botón para reiniciar el cuestionario -->
+  </div>
+</ion-content>

@@ -1,0 +1,22 @@
+ion-card {
+  --background: var(--ion-background-color);
+  color: var(--ion-text-color);
+}
+
+ion-card-header {
+  --background: transparent;
+}
+
+ion-item {
+  --background: transparent;
+  color: var(--ion-text-color);
+}
+
+ion-label {
+  color: var(--ion-text-color);
+}
+
+ion-button {
+  --color: var(--ion-color-primary-contrast);
+  --background: var(--ion-color-primary);
+}
